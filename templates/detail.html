@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{picture.img.url}}" width="300" height="300">
+
+        </div>
+        <div class="col-md-6">
+     <h2>{{picture.name}}</h2><br>
+     <h4>{{picture.desc}}</h4><br>
+     <h6>{{picture.year}}</h6><br>
+     <h6>{{picture.actors}}</h6><br>
+     <h6>{{picture.category}}</h6><br>
+     <h6>{{picture.link}}</h6><br>
+     <a class="btn btn-warning" href="{% url 'pictureapp:edit' picture.id %}">edit</a>
+     <a class="btn btn-danger" href="{% url 'pictureapp:delete' picture.id %}">Delete</a>
+   </div>
+     </div>
+</div>
+{% endblock %}
